@@ -24,7 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //Supermarket CRUD APIs
 Route::prefix('v1')->group(function(){
-    Route::post("supermarkets/add",[SupermarketController::class, 'add']);
+    Route::post("supermarkets/add",[SupermarketController::class, 'store']);
     Route::get("supermarkets/list",[SupermarketController::class, 'list']);
     Route::get("supermarkets/view/{id}",[SupermarketController::class, 'view']);
     Route::delete("supermarkets/delete/{id}",[SupermarketController::class, 'delete']);

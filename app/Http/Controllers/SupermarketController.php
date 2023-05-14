@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class SupermarketController extends Controller
 {
     //
-    public function add(SupermarketRequest $request)
+    public function store(SupermarketRequest $request)
     {
         $supermarket = new Supermarket([
             'name' => $request->get('name'),
