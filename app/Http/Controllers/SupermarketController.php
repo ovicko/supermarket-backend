@@ -18,7 +18,7 @@ class SupermarketController extends Controller
 
         $supermarket->save();
 
-        return response()->json("Test success");
+        return response()->json("success");
     }
 
     public function list()
