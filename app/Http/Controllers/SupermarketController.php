@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SupermarketRequest;
 use App\Models\Supermarket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class SupermarketController extends Controller
 {
     //
-    public function add(Request $request)
+    public function add(SupermarketRequest $request)
     {
         $supermarket = new Supermarket([
             'name' => $request->get('name'),
