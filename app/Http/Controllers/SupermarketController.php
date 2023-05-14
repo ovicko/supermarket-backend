@@ -25,7 +25,7 @@ class SupermarketController extends Controller
     public function list()
     {
         $supermarkets = DB::table('supermarkets')
-        ->orderBy('name', 'desc')
+        ->orderBy('name', 'asc')
         ->get();
 
         $data['supermarkets'] = $supermarkets;
