@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SupermarketController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Supermarket CRUD APIs
+Route::post("add-supermarkets",[SupermarketController::class, 'add']);
+Route::get("list-supermarkets",[SupermarketController::class, 'list']);
+Route::get("view-supermarket/{id}",[SupermarketController::class, 'view']);
+Route::delete("delete-supermarket/{id}",[SupermarketController::class, 'delete']);
+Route::post("update-supermarket/{id}",[SupermarketController::class, 'update']);
