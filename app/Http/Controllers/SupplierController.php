@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SupplierRequest;
 use App\Models\Supplier;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class SupplierController extends Controller
 {
     //
-    public function store(Request $request)
+    public function store(SupplierRequest $request)
     {
         $supplier = new Supplier([
             'name' => $request->get('name'),
