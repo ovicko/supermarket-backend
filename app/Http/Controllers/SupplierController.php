@@ -16,7 +16,7 @@ class SupplierController extends Controller
             'name' => $request->get('name'),
             'phone' => $request->get('phone'),
             'location' => $request->get('location'),
-            'supermarket_id' => $request->get('supermarket_id')
+            'supermarket' => $request->get('supermarket')
         ]);
 
         $supplier->save();
