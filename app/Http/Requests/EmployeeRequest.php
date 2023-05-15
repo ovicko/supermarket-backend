@@ -24,8 +24,8 @@ class EmployeeRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:255',
-            'phone' => 'required|max:12|min:10|unique:employees',
+            'name' => 'required|string|max:255',
+            'phone' => 'required|string|max:12|min:10|unique:employees',
             'supermarket_id' => 'required',
             'type' => 'required',
             'manager_id' => 'required',

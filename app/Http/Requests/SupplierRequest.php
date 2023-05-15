@@ -24,10 +24,10 @@ class SupplierRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:255',
+            'name' => 'required|string|max:255',
             'supermarket_id' => 'required',
-            'phone' => 'required|unique:suppliers',
-            'location' => 'required',
+            'phone' => 'required|string|unique:suppliers',
+            'location' => 'required|string',
         ];
 
     }

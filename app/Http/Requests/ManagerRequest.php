@@ -25,10 +25,10 @@ class ManagerRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:255',
+            'name' => 'required|string|max:255',
             'supermarket_id' => 'required|unique:managers',
-            'phone' => 'required|unique:managers',
-            'email' => 'required|unique:managers',
+            'phone' => 'required|string|unique:managers',
+            'email' => 'required|string|unique:managers',
         ];
 
     }

@@ -24,8 +24,8 @@ class SupermarketRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:255',
-            'location' => 'required',
+            'name' => 'required|string|max:255',
+            'location' => 'required|string|max:255',
         ];
 
     }
