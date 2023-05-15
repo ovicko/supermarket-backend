@@ -24,7 +24,7 @@ class BulkUploadRequest extends FormRequest
     public function rules()
     {
         return [
-            'file' => 'required|mimes:csv|max:2048',
+            'file' => 'required|file|mimes:csv|max:2048',
             'user_id' => 'required',
         ];
 
