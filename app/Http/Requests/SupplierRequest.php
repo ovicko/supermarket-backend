@@ -25,7 +25,7 @@ class SupplierRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'supermarket_id' => 'required',
+            'supermarket' => 'required',
             'phone' => 'required|string|unique:suppliers',
             'location' => 'required|string',
         ];
@@ -47,7 +47,7 @@ class SupplierRequest extends FormRequest
         return [
             'name.required' => 'Supplier name is required',
             'phone.required' => 'Phone is required',
-            'supermarket_id.required' => 'Supermarket is required',
+            'supermarket.required' => 'Supermarket is required',
             'location.required' => 'Location is required'
         ];
     }
