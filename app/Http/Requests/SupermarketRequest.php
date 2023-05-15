@@ -25,7 +25,7 @@ class SupermarketRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255',
-            'location' => 'required|unique:managers',
+            'location' => 'required',
         ];
 
     }
@@ -43,7 +43,7 @@ class SupermarketRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Name is required',
+            'name.required' => 'Supermarket name is required',
             'location.required' => 'Location is required',
         ];
 
