@@ -50,6 +50,5 @@ class SupplierRequest extends FormRequest
             'supermarket_id.required' => 'Supermarket is required',
             'location.required' => 'Location is required'
         ];
-
     }
 }
