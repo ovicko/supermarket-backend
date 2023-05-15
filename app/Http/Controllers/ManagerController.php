@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BulkUploadRequest;
 use App\Http\Requests\ManagerRequest;
 use App\Models\Manager;
 use Illuminate\Http\Request;
@@ -30,10 +31,12 @@ class ManagerController extends Controller
     /**
      * Bulk upload CSV employees and assign to managers
      */
-    public function bulk(Request $request,string $managerId)
+    public function bulk(BulkUploadRequest $request,string $managerId)
     {
-
-        return response()->json("success");
+        $csvPath = $request->file('file');
+        $users = array_map('str_getcsv', file($csvPath));
+        //implement db insertion
+        return response()->json(count($users));
     }
     
     public function list()
